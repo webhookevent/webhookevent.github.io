@@ -18,6 +18,8 @@
 }
 
 [data-theme="dark"] {
+    --primary: #F06292;
+    --primary-dark: #EC407A;
     --bg-primary: #0f172a;
     --bg-secondary: #1e293b;
     --text-primary: #f1f5f9;
