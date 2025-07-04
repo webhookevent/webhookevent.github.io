@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-    <!-- Include Inter font -->
+    <!-- Include Inter font as a Sohne alternative -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -25,8 +25,14 @@
                     <a href="#features">Features</a>
                     <a href="#how-it-works">How It Works</a>
                     <a href="#pricing">Pricing</a>
-                    <a href="#contact">Contact</a>
+                    <a href="https://github.com/webhookevent" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
                 </div>
+                <!-- Dark mode toggle -->
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
             </nav>
         </div>
     </header>
@@ -40,6 +46,9 @@
                     <div class="hero-buttons">
                         <a href="#pricing" class="btn">Get Started</a>
                         <a href="#how-it-works" class="btn btn-outline">How It Works</a>
+                        <a href="https://github.com/webhookevent" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
                     </div>
                 </div>
                 <div class="hero-diagram">
@@ -49,7 +58,7 @@
             
             <div class="code-section">
                 <h2>Simple, Secure API Integration</h2>
-                <p class="code-description">Integrate webhook management seamlessly, securely, and in the world's most popular languages and frameworks.</p>
+                <p class="code-description">Integrate webhook management seamlessly, securely, and in the world's most popular languages and frameworks. Check our <a href="https://github.com/webhookevent" target="_blank" rel="noopener noreferrer">GitHub</a> for SDKs and examples.</p>
                 <div class="code-container">
                     <div class="code-tabs">
                         <button class="code-tab active" data-tab="curl">cURL</button>
@@ -71,17 +80,17 @@ curl -X POST https://api.webhookevent.com/v1/endpoints \
                         </div>
                         <div class="code-panel" id="javascript">
                             <pre class="code-block">
-// Coming soon
+// Coming soon - Check our GitHub for SDKs
                             </pre>
                         </div>
                         <div class="code-panel" id="python">
                             <pre class="code-block">
-# Coming soon
+# Coming soon - Check our GitHub for SDKs
                             </pre>
                         </div>
                         <div class="code-panel" id="csharp">
                             <pre class="code-block">
-// Coming soon
+// Coming soon - Check our GitHub for SDKs
                             </pre>
                         </div>
                     </div>
@@ -188,7 +197,7 @@ curl -X POST https://api.webhookevent.com/v1/endpoints \
                         <li>Basic authentication</li>
                         <li>Email support</li>
                     </ul>
-                    <a href="#contact" class="btn">Get Started</a>
+                    <a href="https://github.com/webhookevent" target="_blank" rel="noopener noreferrer" class="btn">Get Started</a>
                 </div>
                 <div class="pricing-card highlight">
                     <div class="highlight-badge">Most Popular</div>
@@ -201,7 +210,7 @@ curl -X POST https://api.webhookevent.com/v1/endpoints \
                         <li>30-day event retention</li>
                         <li>Priority email support</li>
                     </ul>
-                    <a href="#contact" class="btn">Get Started</a>
+                    <a href="https://github.com/webhookevent" target="_blank" rel="noopener noreferrer" class="btn">Get Started</a>
                 </div>
                 <div class="pricing-card">
                     <h3>Enterprise</h3>
@@ -214,75 +223,44 @@ curl -X POST https://api.webhookevent.com/v1/endpoints \
                         <li>Dedicated support</li>
                         <li>SLA guarantees</li>
                     </ul>
-                    <a href="#contact" class="btn">Contact Us</a>
+                    <a href="https://github.com/webhookevent/server/issues" target="_blank" rel="noopener noreferrer" class="btn">File an Issue</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section contact" id="contact">
-        <div class="container">
-            <div class="section-heading">
-                <h2>Get In Touch</h2>
-                <p>Have questions or ready to get started? Reach out to our team.</p>
-            </div>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h3>Ready to simplify your webhook integrations?</h3>
-                    <p>WebhookEvent makes it easy to connect modern SaaS services with your enterprise systems without compromising security.</p>
-                    <p>Fill out the form and we'll get back to you as soon as possible to discuss how we can help your organization integrate with webhooks securely.</p>
-                </div>
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="company">Company</label>
-                        <input type="text" id="company" class="form-control">
-                    </div>
-                    <button type="submit" class="btn">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <footer style="background-color: white; color: #333;">
+    <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-about">
                     <div class="footer-logo">
                         <img src="assets/icon.png" alt="WebhookEvent Logo" class="footer-logo-image">
-                        <span style="color: #333;">WebhookEvent</span>
+                        <span>WebhookEvent</span>
                     </div>
-                    <p style="color: #64748b;">Secure webhook management for enterprise environments. Connect your systems to modern SaaS platforms without compromising security.</p>
+                    <p>Secure webhook management for enterprise environments. Connect your systems to modern SaaS platforms without compromising security.</p>
                     <div class="social-links">
-                        <a href="https://github.com/webhookevent" style="color: #333;"><i class="fab fa-github"></i></a>
+                        <a href="https://github.com/webhookevent" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
                 <div class="footer-links">
-                    <h4 style="color: #333;">Product</h4>
+                    <h4>Product</h4>
                     <ul>
-                        <li><a href="#features" style="color: #64748b;">Features</a></li>
-                        <li><a href="#how-it-works" style="color: #64748b;">How It Works</a></li>
-                        <li><a href="#pricing" style="color: #64748b;">Pricing</a></li>
-                        <li><a href="#" style="color: #64748b;">Documentation</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="https://github.com/webhookevent" target="_blank" rel="noopener noreferrer">Documentation</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
-                    <h4 style="color: #333;">Legal</h4>
+                    <h4>Resources</h4>
                     <ul>
-                        <li><a href="#" style="color: #64748b;">Terms of Service</a></li>
-                        <li><a href="#" style="color: #64748b;">Privacy Policy</a></li>
-                        <li><a href="#" style="color: #64748b;">Security</a></li>
+                        <li><a href="https://github.com/webhookevent" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="https://github.com/webhookevent" target="_blank" rel="noopener noreferrer">SDKs</a></li>
+                        <li><a href="https://github.com/webhookevent/server/issues" target="_blank" rel="noopener noreferrer">File an Issue</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="copyright" style="color: #64748b; border-top: 1px solid #e5e7eb;">
+            <div class="copyright">
                 &copy; 2025 WebhookEvent.com
             </div>
         </div>

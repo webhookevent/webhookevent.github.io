@@ -1,20 +1,31 @@
-// Form submission handler
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
+// Theme toggle functionality
+const themeToggle = document.getElementById('themeToggle');
+const html = document.documentElement;
+const themeIcon = themeToggle.querySelector('i');
+
+// Check for saved theme preference or default to light
+const currentTheme = localStorage.getItem('theme') || 'light';
+html.setAttribute('data-theme', currentTheme);
+updateThemeIcon(currentTheme);
+
+themeToggle.addEventListener('click', function() {
+    const currentTheme = html.getAttribute('data-theme');
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
     
-    // In a real implementation, you would send this data to your backend
-    const formData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        company: document.getElementById('company').value,
-        message: document.getElementById('message').value
-    };
-    
-    // Simple confirmation for now
-    // In production, this would be replaced with an actual form submission
-    alert('Thanks for your message! We will get back to you soon.');
-    this.reset();
+    html.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    updateThemeIcon(newTheme);
 });
+
+function updateThemeIcon(theme) {
+    if (theme === 'dark') {
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+    } else {
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+    }
+}
 
 // Mobile menu toggle
 document.getElementById('mobileMenuBtn').addEventListener('click', function() {
